@@ -1,0 +1,13 @@
+name: text-width-estimation
+channels:
+  - conda-forge
+  - jetbrains
+dependencies:
+  - python=3.8
+  - jupyter
+  - numpy
+  - pandas
+  - pip
+  - scipy
+  - pip:
+    - lets-plot
