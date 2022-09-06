@@ -8,6 +8,6 @@ dependencies:
   - numpy
   - pandas
   - pip
-  - scipy
+  - scikit-learn
   - pip:
     - lets-plot
