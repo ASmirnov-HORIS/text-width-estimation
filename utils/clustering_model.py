@@ -51,10 +51,11 @@ class ClusteringModel:
         self.extra_symbol_width = (self.calc_cluster_size or self._calc_cluster_size)(self.predictor)
         return self
 
-    def predict(self, text, name=None):
+    def predict(self, text, *, name=None, round_result=True):
         return predict(
             text, self.predictor,
-            name=name, allow_extra_symbols=self.allow_extra_symbols, extra_symbol_width=self.extra_symbol_width
+            name=name, round_result=round_result,
+            allow_extra_symbols=self.allow_extra_symbols, extra_symbol_width=self.extra_symbol_width
         )
 
     def _calc_admixture_clusters(self, admixture_counts):
