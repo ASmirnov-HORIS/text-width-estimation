@@ -4,10 +4,13 @@ channels:
   - jetbrains
 dependencies:
   - python=3.8
+  - Faker
   - jupyter
   - numpy
   - pandas
   - pip
   - scikit-learn
+  - svgwrite
+  - wxPython
   - pip:
     - lets-plot

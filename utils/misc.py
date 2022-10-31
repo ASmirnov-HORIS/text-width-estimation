@@ -3,12 +3,12 @@ LetsPlot.setup_html()
 
 from . import transform_data as utd
 
-def read_data(path, *, monospaced=None, family=None, family_col="font_family"):
+def read_data(path, *, monospaced=None, family=None, family_col="font_family", dtype={"text": str}):
     import pandas as pd
 
     TARGET_FAMILIES = ["Arial", "Courier", "Geneva", "Georgia", "Helvetica", "Lucida Console", "Lucida Grande", "Times New Roman", "Verdana"]
 
-    df = pd.read_csv(path)
+    df = pd.read_csv(path, dtype=dtype)
     if monospaced is not None:
         if monospaced:
             df = utd.narrow_to_one_value(df, "is_monospaced", True)
